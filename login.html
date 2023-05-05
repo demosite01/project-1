@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Web Content">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav_icon.png"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Website title</title>
+</head>
+
+<body>
+  <!-- preloader start  -->
+  <div id="preloader">
+    <img src="img/logo.svg" alt="Logo" class="img-fluid">
+  </div>
+
+  <!-- preloader end -->
+  <!-- wrapp start  -->
+  <div class="wrapp logInWrapp">
+    <div class="DontPickEnglish">
+      <div class="logoImg text-center">
+        <a href="index.html"><img src="img/logo.svg" alt="img" class="img-fluid"></a>
+      </div>
+      <div class="textItem">
+        <h4>Welcome back!</h4>
+        <a href="register.html">I need to register!</a>
+      </div>
+      <div class="hidden text-center" id="error-message"">
+        <h4>Whoops!</h4>
+        <span>Try that again.</span>
+      </div>
+
+      <form action="" class=" FromItem">
+        <div class="form-group">
+          <label for="email">Login ID</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="youremail@email.com" required>
+        </div>
+        <div class="form-group mb-0">
+          <label for="email">Password</label>
+          <div class="passwordWrapp">
+            <input type="password" name="password" id="password" class="password form-control"
+              placeholder="(8to12alphanum+symbol)" required>
+            <span class="show-hide-button"><img src="img/eye.svg" alt="img" class="img-fluid"></span>
+          </div>
+        </div>
+
+
+        <div class="text-center buttonItem">
+          <button type="submit" class="btn"><img src="img/Yes-Button.svg" alt="img" class="img-fluid"></button>
+        </div>
+        <div class="HelpButton">
+          <a href="forget.html"><img src="img/help.svg" alt="img" class="img-fluid"></a>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- wrapp end -->
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.FromItem').submit(function (event) {
+          event.preventDefault(); // Prevent form submission from reloading the page
+          var email = $('#email').val();
+          var password = $('#password').val();
+
+          $('#error-message').removeClass('hidden');
+          $('.FromItem').addClass('wrrongWrapp');
+          $('.textItem').addClass('hidden');
+
+        });
+      });
+
+      $(document).ready(function () {
+        // Get references to the password input and show/hide button
+        var passwordInput = $('.password');
+        var showHideButton = $('.show-hide-button');
+
+        // Set the initial state of the password input to "password"
+        passwordInput.attr('type', 'password');
+
+        // Add a click event listener to the show/hide button
+        showHideButton.click(function () {
+          // Toggle the password input
+          var type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+          passwordInput.attr('type', type);
+
+          // Toggle the show/hide icon
+          showHideButton.toggleClass('hide-password');
+        });
+      });
+    </script>
+    <script>
+      $(window).on('load', function () {
+        $('#preloader').fadeOut('slow', function () {
+          // Show the main section
+          $('#main-section').fadeIn('slow');
+        });
+
+      });
+
+    </script>
+</body>
+
+</html>
