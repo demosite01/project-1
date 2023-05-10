@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Web Content">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav_icon.png"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Website title</title>
+</head>
+
+<body>
+  <!-- preloader start  -->
+  <div id="preloader">
+    <img src="img/logo.svg" alt="Logo" class="img-fluid">
+  </div>
+
+  <!-- preloader end -->
+  <!-- Data Collection start  -->
+  <div class="DataCollection">
+    <!-- logoWrappData start  -->
+    <div class="logoWrappData">
+      <ul class="d-flex justify-content-between flex-wrap">
+        <li class="align-self-center arrowLeft"><a href=""><img src="img/arrowLeft.svg" alt="img" class="img-fluid"></a>
+        </li>
+        <li class="align-self-center logoItem"><a href=""><img src="img/logo.svg" alt="img" class="img-fluid"></a></li>
+        <li class="align-self-center dot3"><a href=""><img src="img/3Dot.svg" alt="img" class="img-fluid"></a></li>
+      </ul>
+    </div>
+    <!-- logoWrappData end  -->
+
+    <!-- Photo Evidence start  -->
+    <div class="PhotoEvidence">
+      <h4>Notes</h4>
+      <p>Enter notes about your activities, clients, obstacles, or any reminders</p>
+    </div>
+    <!-- Photo Evidence end -->
+    <div class="text-center buttonItem">
+      <button type="submit" class="btn">
+        <svg width="98" height="80" style="max-width:95%;" viewBox="0 0 98 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_48_2139)">
+            <path
+              d="M4 0H76.5V9H4V0ZM4 37.5H46V46.5H4V37.5ZM4 18.72L64 19V28L4 27.72V18.72ZM88.6697 41.94L92.6636 38.04C94.4455 36.3 94.4455 33.42 92.6636 31.68L88.3011 27.42C86.5192 25.68 83.5699 25.68 81.788 27.42L77.7942 31.32L88.6697 41.94ZM85.0445 45.48L57.8863 72H47.0108V61.38L74.169 34.86L85.0445 45.48Z" />
+          </g>
+          <defs>
+            <filter id="filter0_d_48_2139" x="0" y="0" width="98" height="80" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_48_2139" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_48_2139" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+
+
+
+      </button>
+    </div>
+    <div class="HelpButton">
+      <a href="forget.html"><img src="img/help.svg" alt="img" class="img-fluid"></a>
+    </div>
+  </div>
+  <!-- Data Collection end  -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.FromItem').submit(function (event) {
+        event.preventDefault(); // Prevent form submission from reloading the page
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $('#error-message').removeClass('hidden');
+        $('.FromItem').addClass('wrrongWrapp');
+        $('.textItem').addClass('hidden');
+
+      });
+    });
+
+    $(document).ready(function () {
+      // Get references to the password input and show/hide button
+      var passwordInput = $('.password');
+      var showHideButton = $('.show-hide-button');
+
+      // Set the initial state of the password input to "password"
+      passwordInput.attr('type', 'password');
+
+      // Add a click event listener to the show/hide button
+      showHideButton.click(function () {
+        // Toggle the password input
+        var type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+        passwordInput.attr('type', type);
+
+        // Toggle the show/hide icon
+        showHideButton.toggleClass('hide-password');
+      });
+    });
+  </script>
+  <script>
+    $(window).on('load', function () {
+      $('#preloader').fadeOut('slow', function () {
+        // Show the main section
+        $('#main-section').fadeIn('slow');
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

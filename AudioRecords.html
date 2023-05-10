@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Web Content">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav_icon.png"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Website title</title>
+</head>
+
+<body>
+  <!-- preloader start  -->
+  <div id="preloader">
+    <img src="img/logo.svg" alt="Logo" class="img-fluid">
+  </div>
+
+  <!-- preloader end -->
+  <!-- Data Collection start  -->
+  <div class="DataCollection">
+    <!-- logoWrappData start  -->
+    <div class="logoWrappData">
+      <ul class="d-flex justify-content-between flex-wrap">
+        <li class="align-self-center arrowLeft"><a href=""><img src="img/arrowLeft.svg" alt="img" class="img-fluid"></a>
+        </li>
+        <li class="align-self-center logoItem"><a href=""><img src="img/logo.svg" alt="img" class="img-fluid"></a></li>
+        <li class="align-self-center dot3"><a href=""><img src="img/3Dot.svg" alt="img" class="img-fluid"></a></li>
+      </ul>
+    </div>
+    <!-- logoWrappData end  -->
+
+    <!-- Photo Evidence start  -->
+    <div class="PhotoEvidence">
+      <h4>Audio Records</h4>
+      <p>To save time, record your report. Please include the following: Project, location, date of service, activity,
+        number of
+        clients, etc...blah blah</p>
+    </div>
+    <!-- Photo Evidence end -->
+    <div class="text-center buttonItem">
+      <button type="submit" class="btn">
+        <svg width="46" height="58" viewBox="0 0 46 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_597_4318)">
+            <path
+              d="M23 34.375C28.7238 34.375 33.3636 30.1777 33.3636 25V9.375C33.3636 4.19727 28.7238 0 23 0C17.2762 0 12.6364 4.19727 12.6364 9.375V25C12.6364 30.1777 17.2762 34.375 23 34.375ZM40.2727 18.75H38.5455C37.5911 18.75 36.8182 19.4492 36.8182 20.3125V25C36.8182 32.3047 29.8562 38.166 21.6193 37.4395C14.4403 36.8057 9.18182 30.9678 9.18182 24.4434V20.3125C9.18182 19.4492 8.40886 18.75 7.45455 18.75H5.72727C4.77295 18.75 4 19.4492 4 20.3125V24.2344C4 32.9883 10.9059 40.792 20.4091 41.9775V45.3125H14.3636C13.4093 45.3125 12.6364 46.0117 12.6364 46.875V48.4375C12.6364 49.3008 13.4093 50 14.3636 50H31.6364C32.5907 50 33.3636 49.3008 33.3636 48.4375V46.875C33.3636 46.0117 32.5907 45.3125 31.6364 45.3125H25.5909V42.0146C34.8437 40.8662 42 33.6816 42 25V20.3125C42 19.4492 41.227 18.75 40.2727 18.75Z" />
+          </g>
+          <defs>
+            <filter id="filter0_d_597_4318" x="0" y="0" width="46" height="58" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_597_4318" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_597_4318" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+
+
+      </button>
+    </div>
+    <div class="HelpButton">
+      <a href="forget.html"><img src="img/help.svg" alt="img" class="img-fluid"></a>
+    </div>
+  </div>
+  <!-- Data Collection end  -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.FromItem').submit(function (event) {
+        event.preventDefault(); // Prevent form submission from reloading the page
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $('#error-message').removeClass('hidden');
+        $('.FromItem').addClass('wrrongWrapp');
+        $('.textItem').addClass('hidden');
+
+      });
+    });
+
+    $(document).ready(function () {
+      // Get references to the password input and show/hide button
+      var passwordInput = $('.password');
+      var showHideButton = $('.show-hide-button');
+
+      // Set the initial state of the password input to "password"
+      passwordInput.attr('type', 'password');
+
+      // Add a click event listener to the show/hide button
+      showHideButton.click(function () {
+        // Toggle the password input
+        var type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+        passwordInput.attr('type', type);
+
+        // Toggle the show/hide icon
+        showHideButton.toggleClass('hide-password');
+      });
+    });
+  </script>
+  <script>
+    $(window).on('load', function () {
+      $('#preloader').fadeOut('slow', function () {
+        // Show the main section
+        $('#main-section').fadeIn('slow');
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

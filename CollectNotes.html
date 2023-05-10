@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Web Content">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav_icon.png"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Website title</title>
+</head>
+
+<body>
+  <!-- preloader start  -->
+  <div id="preloader">
+    <img src="img/logo.svg" alt="Logo" class="img-fluid">
+  </div>
+
+  <!-- preloader end -->
+  <!-- Data Collection start  -->
+  <div class="DataCollection">
+    <!-- logoWrappData start  -->
+    <div class="logoWrappData">
+      <ul class="d-flex justify-content-between flex-wrap">
+        <li class="align-self-center arrowLeft"><a href=""><img src="img/arrowLeft.svg" alt="img" class="img-fluid"></a>
+        </li>
+        <li class="align-self-center logoItem"><a href=""><img src="img/logo.svg" alt="img" class="img-fluid"></a></li>
+        <li class="align-self-center dot3"><a href=""><img src="img/3Dot.svg" alt="img" class="img-fluid"></a></li>
+      </ul>
+    </div>
+    <!-- logoWrappData end  -->
+
+    <!-- info wrapp start  -->
+    <div class="infoWrapp">
+      <!--Info start  -->
+      <div class="Info">
+        <h4>Info</h4>
+        <p>Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information txt Information text Information text
+          Information
+          text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text</p>
+      </div>
+      <!-- Info end -->
+
+
+      <!--Info start  -->
+      <div class="Info">
+        <h4>Info</h4>
+        <p>Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text Information text Information txt Information text Information text
+          Information
+          text
+          Information text Information text Information text Information text Information text Information text
+          Information text
+          Information text Information text</p>
+      </div>
+      <!-- Info end -->
+    </div>
+    <!-- info wrapp end -->
+
+  </div>
+  <!-- Data Collection end  -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.FromItem').submit(function (event) {
+        event.preventDefault(); // Prevent form submission from reloading the page
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $('#error-message').removeClass('hidden');
+        $('.FromItem').addClass('wrrongWrapp');
+        $('.textItem').addClass('hidden');
+
+      });
+    });
+
+    $(document).ready(function () {
+      // Get references to the password input and show/hide button
+      var passwordInput = $('.password');
+      var showHideButton = $('.show-hide-button');
+
+      // Set the initial state of the password input to "password"
+      passwordInput.attr('type', 'password');
+
+      // Add a click event listener to the show/hide button
+      showHideButton.click(function () {
+        // Toggle the password input
+        var type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+        passwordInput.attr('type', type);
+
+        // Toggle the show/hide icon
+        showHideButton.toggleClass('hide-password');
+      });
+    });
+  </script>
+  <script>
+    $(window).on('load', function () {
+      $('#preloader').fadeOut('slow', function () {
+        // Show the main section
+        $('#main-section').fadeIn('slow');
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>
